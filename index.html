@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7 CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" href="/assets/styles/index.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/318966.png">
+    <title>Coding.js</title>
+    <!-- <script>
+      history.go(-1);
+    </script> -->
+  </head>
+  <body>
+    <div class="container-fluid px-4 mb-3" id="home">
+      <header class="pt-4">
+<div class="d-flex align-items-center justify-content-between">
+  <h1 onclick="home()" class="cursor">Coding.js</h1>
+ 
+  <div class="d-flex align-items-center gap-3">
+  
+     
+     <span  id="ligth-toggle" >
+      <a class="btn"> <i class="fas fa-sun"></i></a>
+     </span>
+     <span id="dark-toggle">
+      <a class="btn"><i class="fas fa-moon"></i></a>
+     </span>
+        
+    
+    <li class="nav-item dropdown d-flex py-3 pe-2 bg-light rounded-3 align-items-center justify-content-center" style="height:50px;width: 160px;">
+      <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Languages
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a class="dropdown-item" href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAJ1BMVEX+/v7VKx4AOKUBOaEAOqS8My3aKRnTKyLz/v4KMpgAN68ALJYALJUJu9BsAAABG0lEQVR4nO3QOW4CABAEwQWbw4b/v5d8WwghApKqdKQJegYAAAAAAAAAAAAAAAAAAADgTVe2uT1zf7q8cv/04Mvmn21+2ObIpklpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKa1PyyzR/bnNjmzDYXtjmwaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUg/5bfpP51oZOwAAAABJRU5ErkJggg==" alt="" class="rounded-circle" style="width: 30px; height: 30px">
+            Rus</a>
+        </li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li>
+          <a class="dropdown-item" href="#"><img src="data:image/png;base64,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" alt="" class="rounded-circle" style="width: 30px; height: 30px">
+            Eng</a>
+        </li>
+      </ul>
+    </li>
+  </div>
+</div>
+        <p class="text-secondary" id="subtitle">JavaScript dasturlash tiliga oid turli qiyinlikdagi masalalar</p>
+       
+      </header>
+      <div class="row py-3 mt-3" id="setOfQuestions">
+      </div>
+    </div>
+    <div class="container-fluid d-none" id="workspace">
+      <div class="row">
+        <div class="col-lg-12 right-box mt-4 mt-lg-0">
+          <div class="row" id="rows">
+            <div class="col-lg-6">
+              <div id="question-text"></div>
+              <h5 class="text-white">Natijalar <span class="text-warning" id="final-result"></span></h5>
+              <div class="mb-lg-0 mb-4">
+                <p id="result"></p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="editor">
+                <div class="gutter">
+                  <span></span>
+                </div>
+                <textarea name="" id="answer" rows="5"></textarea>
+              </div>
+              <button class="btn float-end mt-4" id="submit" onclick="submit()">Topshirish</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- <audio src="sound.mp3" id="applause"></audio> -->
+    <script src="https://www.wpromotions.eu/confetti.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+
+    <script src="/assets/js/const.js"></script>
+    <script src="/assets/js/questions.js"></script>
+    <script src="/assets/js/questionSets.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
